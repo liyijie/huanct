@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  member: 1
+  name: MyString
+  gongxian: 1
+  dianping: 1
+  qiandao: 1
+  reg_time: MyString
+  last_time: MyString
+
+two:
+  member: 1
+  name: MyString
+  gongxian: 1
+  dianping: 1
+  qiandao: 1
+  reg_time: MyString
+  last_time: MyString

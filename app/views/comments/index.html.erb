@@ -1,0 +1,35 @@
+<!-- <h1 class="page-header">环翠堂</h1> -->
+
+<h2 class="page-header">点评网账号信息</h2>
+<table class="table table-condensed table-striped">
+  <thead>
+    <tr>
+      <th>点评网ID</th>
+      <th>点评网账号</th>
+      <th>贡献值</th>
+      <th>点评数</th>
+      <th>签到数</th>
+      <th>注册时间</th>
+      <th>最后登录</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @comments.each do |comment| %>
+      <tr>
+        <td><%= link_to comment.member,  "http://www.dianping.com/member/#{comment.member}" %></td>
+        <td><%= link_to comment.name,  "http://www.dianping.com/member/#{comment.member}" %></td>
+        <td><%= comment.gongxian %></td>
+        <td><%= link_to comment.dianping,  "http://www.dianping.com/member/#{comment.member}/reviews" %></td>
+        <td><%= link_to comment.qiandao,  "http://www.dianping.com/member/#{comment.member}/checkin" %></td>
+        <td><%= comment.reg_time %></td>
+        <td><%= comment.last_time %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<div class="digg_pagination">
+    <%= will_paginate @comments, :container => false %>
+</div>
+
+<h2 class="page-header">环翠堂点评网信息</h2>
+<iframe src="http://www.dianping.com/shop/4221052" scrolling="no" style="height: 3000px;width: 1024px;border: 0;"></iframe>
